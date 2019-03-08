@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML2</title>
+    <style>
+        body{
+            height:100vh;
+            margin:0; 
+            display: flex; 
+            flex-direction: column;
+        }
+        div{
+            width: 100;
+            flex: 1;
+        }
+    </style>
+    <script>
+        function color(){
+            var color;
+            var i = 0;
+            var div_number = Math.floor(Math.random()*100);
+            while (i < div_number){
+                i++;
+                hue =  Math.floor(Math.random()*360);
+                var d = document.createElement("div");
+                d.style.backgroundColor = "hsl(" + hue + ", 100%, 50%)";
+                document.body.appendChild(d);
+            }
+        }
+    </script>
+</head>
+
+
+<body>
+    <script>color();</script>
+</body>
+
+</html>

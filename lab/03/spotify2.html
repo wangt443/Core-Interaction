@@ -1,0 +1,118 @@
+<!DOCTYPE html> 
+<title>media queries</title>
+<style> 
+
+/* mobile layout */ 
+body{
+	display:grid;
+	grid-template-columns: auto;
+	grid-template-rows: 100px auto;
+}
+
+html { 
+	font-family: 'Avenir'; 
+}
+#curate{
+	font-size: 35px;
+	display:block;
+	font-style: italic;
+	text-align:center;
+/*	position:absolute;*/
+	top:50%;
+	left:50%;
+/*	transform: translate(-50%, -50%)
+*/	width: 10)%;
+/*	margin-left: 50px;*/
+/*	color: blue;*/
+}
+.step2{
+/*	font-size: 20px;
+*/	/*right: 20px;*/
+}
+
+#functions{
+	font-size: 20px;	
+	right:70px; 
+	 }
+
+.options { 
+	right: 70px;
+	top:70px;
+}
+
+@media (hover) and (min-width: 600px) {
+	/* desktop layout smaller window */ 
+	body {
+		grid-template-columns: 200px auto 200px;
+		grid-template-rows: 100px 500px; 
+	}
+}
+@media only screen and (max-width:600px) {
+	.content{
+		font-size:90%;
+	}
+}
+
+@media (hover) and (min-width: 1000px) {
+	/* desktop layout larger window */ 
+	body {
+		grid-template-columns: 200px auto 200px; 
+		grid-template-rows: 100px 500px;
+	}
+}
+
+div:nth-child(odd){
+	background-color: pink;
+}
+div:nth-child(even){
+	background-color: lightblue; 
+}
+
+/*img{
+	max-width:500px;
+}*/
+
+</style>
+<body>
+	<div><div class="content">
+		<h3>Step 1</h3>
+		<p> Press Search Button.</p>
+		<ul>
+			<li>To play order listed in the app: tap an artist, album, or playlist, then tap the first song you want to hear.</li>
+			<li>To shuffle the track listing: tap an artist, album, or playlist then tap <strong>SHUFFLE PLAY.</strong></li>
+		</ul></div></div>
+	<div><div id = "curate">
+			<span class="curate"><strong>How to: Curate a Playlist on Spotify</strong></span></div></div>
+	<div><div class="step2">
+		<h4>Step 2</h4>
+		<p4> Type in song.</p4></div></div>
+	<div><div id="step3">
+			<h5> Step 3 </h5> 
+			<p5> Press play and listen to song. </p5> 
+	<div id="functions">
+		<p> With Spotify, you can...</p>
+			<ul><li>listen</li>
+				<li>play</li>
+				<li>pause</li>
+				<li>skip</li>
+				<li>repeat</li>
+				<li>like</li>
+				<li>dislike</li>
+				<li>share songs</li>
+				<li><div id="container">Shuffle</div></li>
+			</ul></div>
+	<audio controls style="width:50%;"> 
+		<source src="thisgirl.mp3" type="audio/mpeg">
+	</audio>
+		<div id="options">
+			<p> Press "A" to change colors.</p>
+			<p>Press "B" to switch to night mode and to start song. </p>
+			</div>
+	<audio id="audio" controls style="display:none">
+		<source src="thisgirl.mp3" type="audio/mpeg">
+	</audio>
+
+<script type="text/javascript" src = "spotify.js"></script>
+
+</body>
+</html>
